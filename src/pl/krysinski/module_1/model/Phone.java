@@ -1,9 +1,9 @@
 package pl.krysinski.module_1.model;
 
 public class Phone {
-    
-    String producer;
-    String model;
-    Double screenSize;
-    String androidOrIos;
+
+    private String producer;
+    private String model;
+    private Double screenSize;
+    private String androidOrIos;
 }

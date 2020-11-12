@@ -2,8 +2,8 @@ package pl.krysinski.module_1.model;
 
 public class Human {
 
-    String firstName;
-    String lastName;
-    String phone;
-    Animal pet;
+    private String firstName;
+    private String lastName;
+    private String phone;
+    private Animal pet;
 }
