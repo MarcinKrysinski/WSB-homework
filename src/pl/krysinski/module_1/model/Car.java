@@ -4,7 +4,7 @@ public class Car {
 
     private final String producer;
     private final String model;
-    private final Double price = 75000.0;
+    private Double price = 75000.0;
     private Color color;
 
     public Car(String producer, String model, Color color) {
