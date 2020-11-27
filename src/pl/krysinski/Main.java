@@ -11,7 +11,7 @@ public class Main {
 
         Animal dog = new Animal("dog");
         Car car = new Car("Ford", "Mustang", Color.Black);
-        Human human = new Human("Marcin", "Krysiński", "777-777-777", dog, car);
+        Human human = new Human("Marcin", "Krysiński", "777-777-777", dog, car, 70000.0);
 //        System.out.println(human);
 //        System.out.println(human.getSalary());
         human.setCar(car);
