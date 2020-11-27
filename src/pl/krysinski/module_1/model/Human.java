@@ -10,20 +10,21 @@ public class Human {
     private String phone;
     private Animal pet;
     private Car car;
-    private Double salary = 800000.0;
+    private Double salary;
 
-    public Human(String firstName, String lastName, String phone, Animal pet, Car car) {
+    public Human(String firstName, String lastName, String phone, Animal pet, Car car, Double salary) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
         this.pet = pet;
         this.car = car;
+        this.salary = salary;
     }
 
     public void setSalary(Double salary) {
-        if (salary<0){
+        if (salary < 0) {
             System.out.println("Wypłata nie może być ujemna!! (całe szczescie;))");
-        }else{
+        } else {
             System.out.println("wypisuje informacje o tym, że nowe dane zostały wysłane do systemu księgowego");
             System.out.println("wypisuje informację o konieczności odebrania aneksu do umowy od pani Hani z kadr");
             System.out.println("wypisuje info, że ZUS i US już wiedzą o zmianie wypłaty i nie ma sensu ukrywać dochodu");
@@ -34,16 +35,16 @@ public class Human {
 
     public void setCar(Car car) {
         Double priceCar = getCar().getPrice();
-        Double oneTwelfthOfTheCarPrice = priceCar/12;
-        if (priceCar > salary){
-            System.out.println("Nie stać Cie na to auto lecz może uda sie na kredyt. Zobaczmy....");
-            if (oneTwelfthOfTheCarPrice <= salary){
-                System.out.println("Masz auto, co prawda jeszcze nie jest Twoje bo na kredyt");
+        Double oneTwelfthOfTheCarPrice = priceCar / 12;
+        if (priceCar > salary) {
+            System.out.println("Nie stać Cie na to auto, lecz może uda sie na kredyt. Zobaczmy....");
+            if (oneTwelfthOfTheCarPrice <= salary) {
+                System.out.println("Masz auto, co prawda jeszcze nie jest Twoje bo na kredyt, ale zawsze coś.");
                 this.car = car;
-            }else if (oneTwelfthOfTheCarPrice > salary) {
-                System.out.println("Niestety na kredyt odpada. Jedz zbierac Trusawki czy cos");
+            } else if (oneTwelfthOfTheCarPrice > salary) {
+                System.out.println("Niestety na kredyt odpada. Jedz zbierac Truskawki, zapisz się na studia czy cos.");
             }
-        }else if (priceCar < salary){
+        } else if (priceCar < salary) {
             System.out.println("Bogacz! Kupiłeś za gotówke auto!");
             this.car = car;
         }
