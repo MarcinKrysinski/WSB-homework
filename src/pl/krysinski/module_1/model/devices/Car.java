@@ -1,10 +1,7 @@
 package pl.krysinski.module_1.model.devices;
 
 public class Car extends Device {
-
-    String producer;
-    String model;
-    Integer yearOfProduction;
+    
     private Double price ;
     private Color color;
 
@@ -22,10 +19,11 @@ public class Car extends Device {
     @Override
     public String toString() {
         return "Car{" +
-//                "producer='" + producer + '\'' +
-//                ", model='" + model + '\'' +
-                ", price=" + price +
+                "price=" + price +
                 ", color=" + color +
+                ", producer='" + producer + '\'' +
+                ", model='" + model + '\'' +
+                ", yearOfProduction=" + yearOfProduction +
                 '}';
     }
 }

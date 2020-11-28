@@ -2,9 +2,6 @@ package pl.krysinski.module_1.model.devices;
 
 public class Phone extends Device{
 
-    private String producer;
-    private String model;
-    private Integer yearOfProduction;
     private Double screenSize;
     private String androidOrIos;
 
@@ -12,5 +9,16 @@ public class Phone extends Device{
         super(producer, model, yearOfProduction);
         this.screenSize = screenSize;
         this.androidOrIos =androidOrIos;
+    }
+
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "screenSize=" + screenSize +
+                ", androidOrIos='" + androidOrIos + '\'' +
+                ", producer='" + producer + '\'' +
+                ", model='" + model + '\'' +
+                ", yearOfProduction=" + yearOfProduction +
+                '}';
     }
 }

@@ -1,8 +1,8 @@
 package pl.krysinski.module_1.model.devices;
 
 public class Device {
-    private final String producer;
-    private final String model;
+    final String producer;
+    final String model;
     Integer yearOfProduction;
 
     public Device(String producer, String model, Integer yearOfProduction) {
