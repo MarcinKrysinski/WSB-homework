@@ -1,4 +1,6 @@
-package pl.krysinski.module_1.model;
+package pl.krysinski.module_1.model.creatures;
+
+import pl.krysinski.module_1.model.devices.Car;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -11,8 +13,7 @@ public class Human {
     private Animal pet;
     private Car car;
     private Double salary;
-    Double priceCar = getCar().getPrice();
-    Double oneTwelfthOfTheCarPrice = priceCar / 12;
+
 
     public Human(String firstName, String lastName, String phone, Animal pet, Car car, Double salary) {
         this.firstName = firstName;
@@ -24,6 +25,7 @@ public class Human {
     }
 
     public void setSalary(Double salary) {
+
         if (salary < 0) {
             System.out.println("Wypłata nie może być ujemna!! (całe szczescie;))");
         } else {
@@ -36,6 +38,8 @@ public class Human {
     }
 
     public void setCar(Car car) {
+        Double priceCar = getCar().getPrice();
+        Double oneTwelfthOfTheCarPrice = priceCar / 12;
         if (priceCar > salary) {
             System.out.println("Nie stać Cie na to auto, lecz może uda sie na kredyt. Zobaczmy....");
             if (oneTwelfthOfTheCarPrice <= salary) {

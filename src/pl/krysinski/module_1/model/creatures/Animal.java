@@ -1,4 +1,4 @@
-package pl.krysinski.module_1.model;
+package pl.krysinski.module_1.model.creatures;
 
 public class Animal {
 
