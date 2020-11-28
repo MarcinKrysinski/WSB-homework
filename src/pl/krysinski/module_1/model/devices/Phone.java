@@ -1,7 +1,7 @@
 package pl.krysinski.module_1.model.devices;
 
 public class Phone extends Device{
-
+    
     private Double screenSize;
     private String androidOrIos;
 
@@ -9,6 +9,11 @@ public class Phone extends Device{
         super(producer, model, yearOfProduction);
         this.screenSize = screenSize;
         this.androidOrIos =androidOrIos;
+    }
+
+    @Override
+    public void turnOn() {
+        System.out.println("Phone On");
     }
 
     @Override

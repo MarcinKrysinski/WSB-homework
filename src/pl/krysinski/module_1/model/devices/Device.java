@@ -1,6 +1,6 @@
 package pl.krysinski.module_1.model.devices;
 
-public class Device {
+public abstract class Device {
     final String producer;
     final String model;
     Integer yearOfProduction;
@@ -10,6 +10,8 @@ public class Device {
         this.model = model;
         this.yearOfProduction = yearOfProduction;
     }
+
+    public abstract void turnOn();
 
     @Override
     public String toString() {

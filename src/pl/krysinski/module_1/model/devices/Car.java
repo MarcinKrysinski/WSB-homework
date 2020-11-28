@@ -1,7 +1,7 @@
 package pl.krysinski.module_1.model.devices;
 
 public class Car extends Device {
-    
+
     private Double price ;
     private Color color;
 
@@ -14,6 +14,11 @@ public class Car extends Device {
 
     public Double getPrice() {
         return price;
+    }
+
+    @Override
+    public void turnOn() {
+        System.out.println("Vrooom");
     }
 
     @Override

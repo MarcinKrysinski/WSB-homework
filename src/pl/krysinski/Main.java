@@ -6,6 +6,7 @@ import pl.krysinski.module_1.model.devices.Color;
 import pl.krysinski.module_1.model.creatures.Human;
 import pl.krysinski.module_1.model.devices.Phone;
 
+
 public class Main {
 
     public static void main(String[] args) {
@@ -18,6 +19,9 @@ public class Main {
 //        System.out.println(human.getSalary());
         human.setCar(car);
         System.out.println(phone);
+        car.turnOn();
+        phone.turnOn();
+
     }
 
 }
