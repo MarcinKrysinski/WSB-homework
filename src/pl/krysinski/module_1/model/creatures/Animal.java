@@ -1,6 +1,8 @@
 package pl.krysinski.module_1.model.creatures;
 
-public class Animal {
+import pl.krysinski.module_1.model.devices.Saleable;
+
+public class Animal implements Saleable {
 
     private final String species;
     private Double weight;
@@ -44,5 +46,26 @@ public class Animal {
                 "species='" + species + '\'' +
                 ", weight=" + weight +
                 '}';
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) throws Exception {
+        if (seller.getPet().species.equals("human")){
+            System.out.println("Nie handluje się ludzmi!");
+            throw new Exception("Handel człowiekiem");
+        }
+        if (seller.getPet() == null) {
+            System.out.println("Nie ma zwierzaka na sprzedaz ;(");
+            throw new Exception("Brak zwierzaka");
+        } else if (buyer.getCash() < price) {
+            System.out.println("Nie stac Cie ziomek");
+            throw new Exception("Brak hajsu");
+        } else {
+            buyer.setCash(buyer.getCash()- price);
+            seller.setCash(seller.getCash() + price);
+            seller.setPet(seller.getPet());
+            buyer.setPet(null);
+        }
+
     }
 }
