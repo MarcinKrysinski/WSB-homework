@@ -13,15 +13,17 @@ public class Human {
     private Animal pet;
     private Car car;
     private Double salary;
+    public Double cash;
 
 
-    public Human(String firstName, String lastName, String phone, Animal pet, Car car, Double salary) {
+    public Human(String firstName, String lastName, String phone, Animal pet, Car car, Double salary, Double cash) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
         this.pet = pet;
         this.car = car;
         this.salary = salary;
+        this.cash = cash;
     }
 
     public void setSalary(Double salary) {
@@ -62,7 +64,30 @@ public class Human {
         System.out.println(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
         return salary;
     }
-    
+
+    public Animal getPet() {
+        return pet;
+    }
+
+    public void setPet(Animal pet) {
+        this.pet = pet;
+    }
+
+    public Double getCash() {
+        return cash;
+    }
+
+    public void setCash(Double cash) {
+        this.cash = cash;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     @Override
     public String toString() {
@@ -72,6 +97,8 @@ public class Human {
                 ", phone='" + phone + '\'' +
                 ", pet=" + pet +
                 ", car=" + car +
+                ", salary=" + salary +
+                ", cash=" + cash +
                 '}';
     }
 }

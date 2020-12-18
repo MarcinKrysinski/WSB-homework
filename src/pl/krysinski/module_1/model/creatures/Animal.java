@@ -65,6 +65,8 @@ public class Animal implements Saleable {
             seller.setCash(seller.getCash() + price);
             seller.setPet(seller.getPet());
             buyer.setPet(null);
+            System.out.println("Transakcja sfinalizowana!");
+
         }
 
     }

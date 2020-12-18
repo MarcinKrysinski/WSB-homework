@@ -1,5 +1,7 @@
 package pl.krysinski.module_1.model.devices;
 
+import pl.krysinski.module_1.model.creatures.Human;
+
 public abstract class Device {
     final String producer;
     final String model;
@@ -12,6 +14,8 @@ public abstract class Device {
     }
 
     public abstract void turnOn();
+
+
 
     @Override
     public String toString() {
