@@ -2,13 +2,13 @@ package pl.krysinski.module_1.model.creatures;
 
 import pl.krysinski.module_1.model.devices.Saleable;
 
-public class Animal implements Saleable {
+public abstract class Animal implements Saleable, Feedable {
 
     private final String species;
     private Double weight;
     private String name;
 
-    public Animal(String species) {
+    public Animal(String species, Double weight) {
         this.species = species;
 
         if (species.equals("dog")) {
@@ -17,6 +17,10 @@ public class Animal implements Saleable {
         } else if (species.equals("cat")) {
             this.weight = 7.0;
         }
+    }
+
+    public Animal(String species) {
+        this.species = species;
     }
 
     public void feed() {
